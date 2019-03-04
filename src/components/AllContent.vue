@@ -8,6 +8,8 @@
     <SearchButtons />
 
 
+    <Footer />
+
     </div>
 </template>
 
@@ -15,6 +17,7 @@
 //layouts
 import MobileNav from './layouts/MobileNav.vue'
 import InsiderTicker from './layouts/InsiderTicker.vue'
+import Footer from './layouts/Footer.vue'
 
 //logic
 import SearchBar from './logic/SearchBar.vue'
@@ -26,6 +29,7 @@ export default {
     components: {
         MobileNav,
         InsiderTicker,
+        Footer,
         SearchBar,
         SearchButtons
     }
