@@ -3,20 +3,31 @@
 
     <MobileNav />
     <InsiderTicker />
-    
+
+    <SearchBar />
+    <SearchButtons />
+
 
     </div>
 </template>
 
 <script>
+//layouts
 import MobileNav from './layouts/MobileNav.vue'
 import InsiderTicker from './layouts/InsiderTicker.vue'
+
+//logic
+import SearchBar from './logic/SearchBar.vue'
+import SearchButtons from './logic/SearchButtons.vue'
+
 
 export default {
     name: "AllContent",
     components: {
         MobileNav,
-        InsiderTicker
+        InsiderTicker,
+        SearchBar,
+        SearchButtons
     }
 }
 </script>
