@@ -7,12 +7,13 @@
                     <div class="navi-arrow navi-arrow-right"><img src="../../assets/arrow.svg" alt="Arrow"></div>
                         <ul class="categoryRow categoryRowDesktop clearfix" id="categoryrow-1">
                             <li v-for="game in category" v-bind:key="game.id">
-                                <SingleGame v-bind:game="game" v-on:show-info="showInfo"/>
+                                <SingleGame v-bind:game="game" v-on:change-info="changeInfo"/>
                             </li>
                         </ul>
             </div>
-
-        <GameInfo v-if="showInfoDiag" v-bind:info="infoDiagProps" v-on:exit="closeInfo"/>
+        
+        <GameInfo v-bind:showInfo="showInfoDiag" v-bind:info="infoDiagProps" v-on:close-info="closeInfo"/>
+     
 
     </div>
          
@@ -33,24 +34,27 @@ export default {
      data(){
         return {
             showInfoDiag: false,
-            infoDiagProps: {}
+            infoDiagProps: this.category[0]
 
         }
 
     },
     methods: {
-        showInfo(id){
+        changeInfo(id){
             
             this.infoDiagProps =  this.category[id-1];
             this.showInfoDiag = true;
             
         },
         closeInfo(){
-            
             this.showInfoDiag = false;
         }
+       
         
     }
 }
 </script>
+
+
+
 
