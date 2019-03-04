@@ -1,22 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SideMenu />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import SideMenu from './components/layouts/SideMenu.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    SideMenu
   }
 }
 </script>
 
-<style>
+<style src="./style/style.css">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
