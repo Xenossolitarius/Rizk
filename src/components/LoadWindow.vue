@@ -6,7 +6,7 @@
 
     <SearchBar />
     <SearchButtons />
-
+    <CategoryContainer />
 
     <Footer />
 
@@ -22,16 +22,18 @@ import Footer from './layouts/Footer.vue'
 //logic
 import SearchBar from './logic/SearchBar.vue'
 import SearchButtons from './logic/SearchButtons.vue'
+import CategoryContainer from './logic/CategoryContainer'
 
 
 export default {
-    name: "AllContent",
+    name: "LoadWindow",
     components: {
         MobileNav,
         InsiderTicker,
         Footer,
         SearchBar,
-        SearchButtons
+        SearchButtons,
+        CategoryContainer
     }
 }
 </script>

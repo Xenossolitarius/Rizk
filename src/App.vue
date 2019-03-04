@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <SideMenu />
-    <AllContent />
+    <LoadWindow />
   </div>
 </template>
 
 <script>
 
 import SideMenu from './components/layouts/SideMenu.vue'
-import AllContent from './components/AllContent.vue'
+import LoadWindow from './components/LoadWindow.vue'
 
 export default {
   name: 'app',
   components: {
     SideMenu,
-    AllContent
+    LoadWindow
   }
 }
 </script>
