@@ -1,24 +1,12 @@
 <template>
-    <div id="lobby-all" class="lobby-all" ref="container">
-        <div id="category-container" class="category-container">
 
-            <div id="games-a-z" class="games-a-z" style="display: block;">
-                <h2 class="categoryTitle">All games</h2>
-                    <ul class="game-grid search-grid" id="a-z-list">
-
-                    </ul>
-            </div>
-
-
-
-            <div id="game-categories" class="game-categories" >
-                <div v-for="category in categories" v-bind:key="category.id">                    
-                    <SingleCategory v-bind:category="category" v-on:incrise-games="incriseGames"/>                    
-                </div>
-            </div>
-
+    <div id="game-categories" class="game-categories" ref="container">
+        <div v-for="category in categories" v-bind:key="category.id">                    
+            <SingleCategory v-bind:category="category" v-on:incrise-games="incriseGames"/>                    
         </div>
     </div>
+
+   
 </template>
 
 <script>

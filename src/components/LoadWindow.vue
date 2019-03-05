@@ -6,7 +6,8 @@
 
     <SearchBar />
     <SearchButtons />
-    <CategoryContainer v-on:show-footer="showFooter" />
+
+    <Lobby v-on:show-footer="showFooter" />
 
     <Footer v-if="footerIsShown"/>
 
@@ -22,7 +23,7 @@ import Footer from './layouts/Footer.vue'
 //logic
 import SearchBar from './logic/SearchBar.vue'
 import SearchButtons from './logic/SearchButtons.vue'
-import CategoryContainer from './logic/CategoryContainer'
+import Lobby from './logic/Lobby'
 
 
 export default {
@@ -38,7 +39,8 @@ export default {
         Footer,
         SearchBar,
         SearchButtons,
-        CategoryContainer
+        Lobby
+        
     },
     methods: {
         showFooter(){
