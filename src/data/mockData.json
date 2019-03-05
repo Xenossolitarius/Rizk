@@ -248,4 +248,254 @@
     "desc": "Sltr-haris Type IV physeal fracture of upper end of humerus",
     "img": 11020,
     "cat": "sports"
+  },{
+    "id": 51,
+    "desc": "External constriction of left index finger",
+    "img": 7051,
+    "cat": "elite"
+  }, {
+    "id": 52,
+    "desc": "Abrasion of vagina and vulva, subsequent encounter",
+    "img": 7052,
+    "cat": "elite"
+  }, {
+    "id": 53,
+    "desc": "Encephalopathy, unspecified",
+    "img": 7077,
+    "cat": "elite"
+  }, {
+    "id": 54,
+    "desc": "Other chronic pancreatitis",
+    "img": 7183,
+    "cat": "elite"
+  }, {
+    "id": 55,
+    "desc": "Child physical abuse, suspected, subsequent encounter",
+    "img": 7204,
+    "cat": "elite"
+  }, {
+    "id": 56,
+    "desc": "Lac w fb of unsp bk wl of thorax w penet thor cavity, sqla",
+    "img": 7226,
+    "cat": "elite"
+  }, {
+    "id": 57,
+    "desc": "Asphyx due to being trap in oth low oxygen environment, init",
+    "img": 7227,
+    "cat": "elite"
+  }, {
+    "id": 58,
+    "desc": "Other cervical disc degeneration, unsp cervical region",
+    "img": 7232,
+    "cat": "elite"
+  }, {
+    "id": 59,
+    "desc": "Spotted fever [tick-borne rickettsioses]",
+    "img": 7239,
+    "cat": "elite"
+  }, {
+    "id": 60,
+    "desc": "Laceration with foreign body, unspecified ankle, subs encntr",
+    "img": 7247,
+    "cat": "elite"
+  }, {
+    "id": 61,
+    "desc": "Leukemia, unspecified not having achieved remission",
+    "img": 7251,
+    "cat": "trending"
+  }, {
+    "id": 62,
+    "desc": "Poisoning by tetracyclic antidepressants, self-harm",
+    "img": 7256,
+    "cat": "trending"
+  }, {
+    "id": 63,
+    "desc": "Oth disp fx of upper end of unsp humerus, init for clos fx",
+    "img": 7262,
+    "cat": "trending"
+  }, {
+    "id": 64,
+    "desc": "Poisoning by oth psychotropic drugs, accidental, init",
+    "img": 7372,
+    "cat": "trending"
+  }, {
+    "id": 65,
+    "desc": "Terorsm w oth explosn and fragmt, publ sfty offcl inj, sqla",
+    "img": 7399,
+    "cat": "trending"
+  }, {
+    "id": 66,
+    "desc": "Open bite, left hip, initial encounter",
+    "img": 7406,
+    "cat": "trending"
+  }, {
+    "id": 67,
+    "desc": "Pathological fracture, right foot, subs for fx w delay heal",
+    "img": 7412,
+    "cat": "trending"
+  }, {
+    "id": 68,
+    "desc": "Oth fx low end r ulna, subs for opn fx type I/2 w routn heal",
+    "img": 7413,
+    "cat": "trending"
+  }, {
+    "id": 69,
+    "desc": "Toxic effects of corrosive alkalis and alk-like substances",
+    "img": 7414,
+    "cat": "trending"
+  }, {
+    "id": 70,
+    "desc": "Oth fx third MC bone, right hand, subs for fx w nonunion",
+    "img": 7416,
+    "cat": "trending"
+  }, {
+    "id": 71,
+    "desc": "Displ commnt fx shaft of humer, r arm, 7thG",
+    "img": 7615,
+    "cat": "jackpot"
+  }, {
+    "id": 72,
+    "desc": "Subluxation of MCP joint of right middle finger, sequela",
+    "img": 7800,
+    "cat": "jackpot"
+  }, {
+    "id": 73,
+    "desc": "Echinococcus multilocularis infection of liver",
+    "img": 8080,
+    "cat": "jackpot"
+  }, {
+    "id": 74,
+    "desc": "Driver of 3-whl mv injured in clsn w pedl cyc nontraf, init",
+    "img": 8270,
+    "cat": "jackpot"
+  }, {
+    "id": 75,
+    "desc": "Other infective bursitis, wrist",
+    "img": 8537,
+    "cat": "jackpot"
+  }, {
+    "id": 76,
+    "desc": "Disp fx of pisiform, unsp wrist, init for clos fx",
+    "img": 8658,
+    "cat": "jackpot"
+  }, {
+    "id": 77,
+    "desc": "Other fish poisoning, intentional self-harm",
+    "img": 8685,
+    "cat": "jackpot"
+  }, {
+    "id": 78,
+    "desc": "Puncture wound with foreign body of lip, initial encounter",
+    "img": 8686,
+    "cat": "jackpot"
+  }, {
+    "id": 79,
+    "desc": "Influenza due to unidentified influenza virus w otitis media",
+    "img": 9141,
+    "cat": "jackpot"
+  }, {
+    "id": 80,
+    "desc": "Oth infect w sexl mode of transmiss comp preg, third tri",
+    "img": 9420,
+    "cat": "jackpot"
+  }, {
+    "id": 81,
+    "desc": "Abrasion of right forearm, subsequent encounter",
+    "img": 9598,
+    "cat": "race"
+  }, {
+    "id": 82,
+    "desc": "Stillbirth",
+    "img": 9600,
+    "cat": "race"
+  }, {
+    "id": 83,
+    "desc": "Burn of 2nd deg mul sites of left ankle and foot",
+    "img": 9726,
+    "cat": "race"
+  }, {
+    "id": 84,
+    "desc": "Fat necrosis of breast",
+    "img": 9731,
+    "cat": "race"
+  }, {
+    "id": 85,
+    "desc": "Avulsion of unspecified eye, sequela",
+    "img": 9768,
+    "cat": "race"
+  }, {
+    "id": 86,
+    "desc": "Encounter for fit/adjst of partial artificial left arm",
+    "img": 9803,
+    "cat": "race"
+  }, {
+    "id": 87,
+    "desc": "Burn of unsp deg mult sites of unsp wrist and hand, sequela",
+    "img": 9843,
+    "cat": "race"
+  }, {
+    "id": 88,
+    "desc": "Nondisp fx of distal phalanx of left middle finger, sequela",
+    "img": 9853,
+    "cat": "race"
+  }, {
+    "id": 89,
+    "desc": "Juvenile osteochondrosis of tibia and fibula, left leg",
+    "img": 10011,
+    "cat": "race"
+  }, {
+    "id": 90,
+    "desc": "Labyrinthine dysfunction",
+    "img": 10049,
+    "cat": "race"
+  }, {
+    "id": 91,
+    "desc": "Unsp complication of internal prosth dev/grft, subs",
+    "img": 10231,
+    "cat": "sports"
+  }, {
+    "id": 92,
+    "desc": "Displ midcervical fx unsp femur, init for opn fx type 3A/B/C",
+    "img": 10232,
+    "cat": "sports"
+  }, {
+    "id": 93,
+    "desc": "Machinery accident on board sailboat, initial encounter",
+    "img": 10236,
+    "cat": "sports"
+  }, {
+    "id": 94,
+    "desc": "Displ apophyseal fx l femur, subs for clos fx w delay heal",
+    "img": 10239,
+    "cat": "sports"
+  }, {
+    "id": 95,
+    "desc": "Nexdtve age-rel mclr degn, unsp, adv atrpc w/o sbfvl involv",
+    "img": 10243,
+    "cat": "sports"
+  }, {
+    "id": 96,
+    "desc": "Oth fx shaft of radius, left arm, init for opn fx type I/2",
+    "img": 10246,
+    "cat": "sports"
+  }, {
+    "id": 97,
+    "desc": "Disloc of proximal interphaln joint of r little finger, subs",
+    "img": 10250,
+    "cat": "sports"
+  }, {
+    "id": 98,
+    "desc": "Pyoderma vegetans",
+    "img": 10427,
+    "cat": "sports"
+  }, {
+    "id": 99,
+    "desc": "Moderate laceration of body of pancreas, sequela",
+    "img": 10610,
+    "cat": "sports"
+  }, {
+    "id": 100,
+    "desc": "Sltr-haris Type IV physeal fracture of upper end of humerus",
+    "img": 11020,
+    "cat": "sports"
   }]

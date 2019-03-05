@@ -6,9 +6,9 @@
 
     <SearchBar />
     <SearchButtons />
-    <CategoryContainer />
+    <CategoryContainer v-on:show-footer="showFooter" />
 
-    <Footer />
+    <Footer v-if="footerIsShown"/>
 
     </div>
 </template>
@@ -27,6 +27,11 @@ import CategoryContainer from './logic/CategoryContainer'
 
 export default {
     name: "LoadWindow",
+    data(){
+        return {
+            footerIsShown: false
+        }
+    },
     components: {
         MobileNav,
         InsiderTicker,
@@ -34,6 +39,12 @@ export default {
         SearchBar,
         SearchButtons,
         CategoryContainer
+    },
+    methods: {
+        showFooter(){
+            this.footerIsShown = true;
+        }
+
     }
 }
 </script>
