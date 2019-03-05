@@ -4,7 +4,7 @@
     <MobileNav />
     <InsiderTicker />
 
-    <SearchBar />
+    <SearchBar  v-on:search-input="searchInput"/>
     <SearchButtons v-on:filter="buttonPress"/>
 
     <Lobby v-on:show-footer="showFooter" v-bind:filter="filter" />
@@ -45,11 +45,14 @@ export default {
         
     },
     methods: {
-        showFooter(){
-            this.footerIsShown = true;
+        showFooter(data){
+            this.footerIsShown = data;
         },
         buttonPress(filter){
            this.filter = filter;
+        },
+        searchInput(filter){
+            this.filter = filter;
         }
 
 

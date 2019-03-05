@@ -5,7 +5,7 @@
             <SearchContainer v-bind:filtered="filtered" v-if="!showCategory"/>
 
 
-            <CategoryContainer v-on:show-footer="$emit('show-footer')" v-if="showCategory"/>
+            <CategoryContainer v-on:show-footer="showFooter" v-if="showCategory"/>
     
 
         </div>
@@ -43,11 +43,16 @@ export default {
                     this.returnCat(newVal);
                 }else if(newVal == ''){
                     this.showCategory=true;
+                }else{
+                    this.returnSearch(newVal);
                 }
             }
         }
     },
     methods: {
+        showFooter(data){
+            this.$emit('show-footer',data);
+        },
         returnAll(){
             
             for(let i = 0; i < this.$options.myJson.length; i++){   
@@ -99,6 +104,28 @@ export default {
             
             this.filtered.push(...tempFiltered);
             this.showCategory=false;   
+        },
+        returnSearch(input){
+            
+            let tempFiltered=[];
+             for(let i = 0; i < this.$options.myJson.length; i++){   
+
+                tempFiltered.push(this.$options.myJson[i]);    
+
+            }
+
+           tempFiltered = tempFiltered.filter((item)=>{
+                return item.desc.toLowerCase().indexOf(input.toLowerCase()) > -1
+            });
+            while(this.filtered.length){
+                this.filtered.pop();
+            }
+            
+            this.filtered.push(...tempFiltered);
+            this.showCategory=false;  
+
+
+
         }
 
         

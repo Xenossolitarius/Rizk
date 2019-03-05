@@ -62,7 +62,7 @@ export default {
                                       
                 }
             
-            },1000);
+            },1500);
         },  
         incriseGames(cat){
             
@@ -135,7 +135,7 @@ export default {
                     catName = 'sports'
                     break;
                     default:
-                    this.$emit('show-footer');
+                    this.$emit('show-footer',true);
                     return;
                 }
 
@@ -155,8 +155,9 @@ export default {
            
         }
     },
-    created(){
-        
+    beforeDestroy(){
+        window.onscroll = null;
+        this.$emit('show-footer',false);
   
 
         
