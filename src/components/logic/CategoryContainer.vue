@@ -3,8 +3,8 @@
         <div id="category-container" class="category-container">
 
             <div id="game-categories" class="game-categories" >
-                <div v-for="category in categories" v-bind:key="category.id">
-                    <SingleCategory v-bind:category="category" />
+                <div v-for="category in categories" v-bind:key="category.id">                    
+                    <SingleCategory v-bind:category="category" />                    
                 </div>
             </div>
 
@@ -14,9 +14,11 @@
 
 <script>
 import SingleCategory from './SingleCategory'
+import _ from 'lodash'
 
 //testing--will delete
 import MY_JSON from '../../data/mockData.json'
+
 
 //
 export default {
@@ -34,8 +36,31 @@ export default {
         SingleCategory
     },
     methods: {
+        getNumOfCat(){
+            return this.numOfCat;
+        },
+       scroll() {
+           let func = this.getSingleCategory.bind(this);
+           let numOfCat = this.getNumOfCat.bind(this);
+
+            window.onscroll = _.throttle(function(){
+                
+                let scrollY = window.scrollY;
+                let visible = document.documentElement.clientHeight;
+                let pageHeight = document.documentElement.scrollHeight;
+                let bottomOfPage = visible + scrollY >= pageHeight-400;
+                let condition = bottomOfPage || pageHeight < visible;
+            
+                if (condition) {  
+                    
+                    func(10,numOfCat(),0);
+                                      
+                }
+            
+            },1500);
+        },
         getSingleCategory(num,numOfCat,offset){
-            setTimeout(()=>{
+
                let category = [];
                let catName;
                
@@ -74,14 +99,22 @@ export default {
 
                 }
                 this.categories.push(category);
+                this.numOfCat++;
                 
 
-            },1000);
+           
         }
     },
     created(){
-        this.getSingleCategory(10,0,0);
+        this.getSingleCategory(10,this.numOfCat,0);
+        this.getSingleCategory(10,this.numOfCat,0);
+        this.getSingleCategory(10,this.numOfCat,0)
+
         
+    },
+    mounted(){
+       
+       this.scroll();
     }
 }
 </script>

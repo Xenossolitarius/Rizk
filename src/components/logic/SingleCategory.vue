@@ -5,10 +5,10 @@
             <div class="category-desktop" id="category-1">
                 <div class="navi-arrow navi-arrow-left"><img src="../../assets/arrow.svg" alt="Arrow"></div>
                     <div class="navi-arrow navi-arrow-right"><img src="../../assets/arrow.svg" alt="Arrow"></div>
-                        <ul class="categoryRow categoryRowDesktop clearfix" id="categoryrow-1">
-                            <li v-for="game in category" v-bind:key="game.id">
-                                <SingleGame v-bind:game="game" v-on:change-info="changeInfo"/>
-                            </li>
+                        <ul class="categoryRow categoryRowDesktop clearfix" id="categoryrow-1">                            
+                            <li v-for="game in category" v-bind:key="game.id">                                
+                                <SingleGame v-bind:game="game" v-on:change-info="changeInfo"/>                                
+                            </li>                          
                         </ul>
             </div>
         
@@ -42,7 +42,7 @@ export default {
     methods: {
         changeInfo(id){
             
-            this.infoDiagProps =  this.category[id-1];
+            this.infoDiagProps =  this.category.find(obj =>{return obj.id === id});
             this.showInfoDiag = true;
             
         },
@@ -55,6 +55,14 @@ export default {
 }
 </script>
 
+<style scoped>
+.navi-arrow:hover{
+    opacity: 1;
+}
+
+
+
+</style>
 
 
 

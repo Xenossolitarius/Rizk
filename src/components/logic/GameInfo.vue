@@ -1,6 +1,6 @@
 <template>
+        
         <div class="game-info-container" id="game-info-container-2" v-bind:class="{block: isBlock}">
-            
                 <div class="game-info" id="game-info-1" v-bind:class="{active: willSlide}">
                     <button name="close" class="close-fill" aria-hidden="true" @click="$emit('close-info')"></button>
                     <div class="game-info-right" v-bind:style="{backgroundImage: 'url('+getImgUrl()+')'}"></div>
@@ -10,9 +10,10 @@
                         <a class="btn btn-yellow url-real" href="/en/casino/temple-of-treasures-megaways/13595">Play for real</a>
                         <a class="btn btn-inactive-lighter url-fun" href="/en/casino/try/temple-of-treasures-megaways/13595">Play for fun</a>
                     </div>
-                </div>
-           
-            </div>
+                </div>           
+        </div>
+        
+        
 </template>
 
 <script>
@@ -40,7 +41,7 @@ export default {
 
                 }else if(newVal == false){
                     this.willSlide = false;
-                    setTimeout(()=>{this.isBlock=false;},250);
+                    setTimeout(()=>{this.isBlock=false;},500);
                 }
             }
         }
@@ -63,6 +64,8 @@ export default {
 .block{
     display: block;
 }
+
+
 
 </style>
 
