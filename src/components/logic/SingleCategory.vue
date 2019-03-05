@@ -36,7 +36,8 @@ export default {
             showInfoDiag: false,
             infoDiagProps: this.category[0],
             position: 0,
-            numOfGames: 0
+            numOfGames: 0,
+            gameSum:0,
 
         }
 
@@ -55,11 +56,18 @@ export default {
         slideRight(){
             let tempPos = this.position - 200*this.numOfGames;
             this.$emit('incrise-games',this.category[0].cat);
-            this.position = tempPos;
+            this.gameSum += this.numOfGames;
+
+            if(this.gameSum < this.category.length){
+                
+
+
+                this.position = tempPos;
+            }
         },
         slideLeft(){
             let tempPos = this.position + 200*this.numOfGames;
-            if(tempPos <=0){
+            if(tempPos <= 0){
             this.position = tempPos;
             }
         }
