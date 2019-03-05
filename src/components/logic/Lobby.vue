@@ -2,10 +2,10 @@
     <div id="lobby-all" class="lobby-all" >
         <div id="category-container" class="category-container">
 
-            <SearchContainer v-bind:filtered="filtered"/>
+            <SearchContainer v-bind:filtered="filtered" v-if="!showCategory"/>
 
 
-            <CategoryContainer v-on:show-footer="$emit('show-footer')" v-if="false"/>
+            <CategoryContainer v-on:show-footer="$emit('show-footer')" v-if="showCategory"/>
     
 
         </div>
@@ -25,9 +25,24 @@ export default {
         CategoryContainer,
         SearchContainer
     },
+    props: ["filter"],
     data(){
         return{
-            filtered: []
+            filtered: [],
+            showCategory: true
+        }
+    },
+    watch: {
+        filter: {
+            handler(newVal){
+                if(newVal == 'abc'){
+                    this.returnABC();
+                }else if(newVal == 'jackpot'){
+                    this.returnCat(newVal);
+                }else if(newVal == 'race'){
+                    this.returnCat(newVal);
+                }
+            }
         }
     },
     methods: {
@@ -39,11 +54,58 @@ export default {
 
             }
                
+        },
+        returnABC(){
+            let tempFiltered=[];
+             for(let i = 0; i < this.$options.myJson.length; i++){   
+
+                tempFiltered.push(this.$options.myJson[i]);    
+
+            }
+
+            tempFiltered.sort(function(a, b){
+                var x = a.desc.toLowerCase();
+                var y = b.desc.toLowerCase();
+                if (x < y) {return -1;}
+                if (x > y) {return 1;}
+                return 0;
+                });
+
+            while(this.filtered.length){
+                this.filtered.pop();
+            }
+            
+            this.filtered.push(...tempFiltered);
+            this.showCategory=false;            
+           
+        },
+        returnCat(cat){
+            
+            let tempFiltered=[];
+             for(let i = 0; i < this.$options.myJson.length; i++){   
+
+                tempFiltered.push(this.$options.myJson[i]);    
+
+            }
+
+           tempFiltered = tempFiltered.filter((item)=>{
+                return item.cat == cat;
+            });
+            while(this.filtered.length){
+                this.filtered.pop();
+            }
+            
+            this.filtered.push(...tempFiltered);
+            this.showCategory=false;   
         }
+
+        
     },
     created(){
+
         this.returnAll();
-    }
+    },
+    
 }
 </script>
 

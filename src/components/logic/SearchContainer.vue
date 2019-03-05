@@ -4,7 +4,7 @@
                 <h2 class="categoryTitle">All games</h2>
                     <ul class="game-grid search-grid" id="a-z-list">
                          <li v-for="game in filtered" v-bind:key="game.id">                                
-                                <SingleGame v-bind:game="game" v-on:change-info="changeInfo"/>                                
+                                <SingleGame v-bind:game="game" />                                
                             </li>      
                     </ul>
     </div>

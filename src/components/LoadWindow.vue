@@ -5,9 +5,9 @@
     <InsiderTicker />
 
     <SearchBar />
-    <SearchButtons />
+    <SearchButtons v-on:filter="buttonPress"/>
 
-    <Lobby v-on:show-footer="showFooter" />
+    <Lobby v-on:show-footer="showFooter" v-bind:filter="filter" />
 
     <Footer v-if="footerIsShown"/>
 
@@ -30,7 +30,9 @@ export default {
     name: "LoadWindow",
     data(){
         return {
-            footerIsShown: false
+            footerIsShown: false,
+        
+            filter: ''
         }
     },
     components: {
@@ -45,7 +47,11 @@ export default {
     methods: {
         showFooter(){
             this.footerIsShown = true;
+        },
+        buttonPress(filter){
+           this.filter = filter;
         }
+
 
     }
 }
