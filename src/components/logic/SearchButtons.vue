@@ -13,6 +13,9 @@
             <li class="buttons-carousel__list-item">
                         <button id="filter-btn-race" class="filter-btn" @click="$emit('filter','race')">Race games</button>
             </li>
+            <li class="buttons-carousel__list-item">
+                        <button id="filter-btn-race" class="filter-btn" @click="$emit('filter','')">Reset</button>
+            </li>
         </ul>
     </div>
 </template>

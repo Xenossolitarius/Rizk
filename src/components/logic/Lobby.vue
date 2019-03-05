@@ -41,6 +41,8 @@ export default {
                     this.returnCat(newVal);
                 }else if(newVal == 'race'){
                     this.returnCat(newVal);
+                }else if(newVal == ''){
+                    this.showCategory=true;
                 }
             }
         }
