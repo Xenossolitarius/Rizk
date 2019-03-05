@@ -18,7 +18,13 @@ export default {
     components: {
         SingleGame
     },
-    props: ["filtered"]
+    props: ["filtered"],
+    mounted(){
+        this.$emit('show-footer',true);
+    },
+    beforeDestroy(){
+        this.$emit('show-footer',false);
+    }
 }
 </script>
 

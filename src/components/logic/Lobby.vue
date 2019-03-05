@@ -2,7 +2,7 @@
     <div id="lobby-all" class="lobby-all" >
         <div id="category-container" class="category-container">
 
-            <SearchContainer v-bind:filtered="filtered" v-if="!showCategory"/>
+            <SearchContainer v-on:show-footer="showFooter" v-bind:filtered="filtered" v-if="!showCategory"/>
 
 
             <CategoryContainer v-on:show-footer="showFooter" v-if="showCategory"/>
